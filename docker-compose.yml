@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  dotdesk.userpanelbff:
+    image: ${DOCKER_REGISTRY-}dotdeskuserpanelbff
+    build:
+      context: .
+      dockerfile: src/DotDesk.UserPanelBFF/Dockerfile
