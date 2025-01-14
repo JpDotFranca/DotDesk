@@ -17,7 +17,7 @@ public class WebChatHub : Hub
     { 
         ChatMessage message = await _chatService.StoreMessageAsync(room, userId, content);
 
-        await Clients.Group(room).SendAsync("ReceiveMessage", message.UserId, message.Content, message.Timestamp);
+        await Clients.Group(room).SendAsync("ReceiveMessage", message.UserId, message.Content);
     }
 
     public async Task JoinRoom(string room)

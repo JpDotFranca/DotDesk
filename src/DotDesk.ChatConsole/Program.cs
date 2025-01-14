@@ -4,32 +4,44 @@ class Program
 {
     static async Task Main(string[] args)
     {
-        // Replace with the correct URL for your SignalR hub
+        string userName = Guid.NewGuid().ToString();
+
         var connection = new HubConnectionBuilder()
-            .WithUrl("https://localhost:5051/chat") // Change this if using HTTPS or another port
+            .WithUrl("https://localhost:5051/chat")
             .Build();
 
-        // Register a handler for incoming messages
-        connection.On<string, string, string>("ReceiveMessage", (user, message, timestamp) =>
+        connection.On<string, string>("ReceiveMessage", (user, message) =>
         {
-            Console.WriteLine($"[{timestamp}] {user}: {message}");
+            if (user != userName)
+                Console.WriteLine($"Received message from user {user}: {message}");
         });
+
+        Console.WriteLine($"User {userName} from console connected to the hub!");
 
         try
         {
-            // Start the connection
             await connection.StartAsync();
-            Console.WriteLine("Connected to the hub!");
+            Console.WriteLine("Connection established with the server!");
 
-            // Send a test message
-            await connection.InvokeAsync("SendMessage", "general", "test_user", "Hello from C# client!");
+            // Join the room
+            await connection.InvokeAsync("JoinRoom", "general");
+            Console.WriteLine("Joined the room: general");
+
+            // Start the message input loop
+            while (true)
+            {
+                Console.Write("");
+                string message = Console.ReadLine();
+
+                // Send the message to the hub
+                await connection.InvokeAsync("SendMessage", "general", userName, message);
+            }
         }
         catch (Exception ex)
         {
             Console.WriteLine($"Error connecting to the hub: {ex.Message}");
         }
 
-        // Keep the connection open
         Console.WriteLine("Press any key to exit...");
         Console.ReadKey();
     }
