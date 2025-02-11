@@ -1,3 +1,4 @@
+using DotDesk.Application;
 using DotDesk.Application.Services.Abstraction;
 using DotDesk.Application.Services;
 using DotDesk.Infraestucture.Repositories.Abstraction;
@@ -49,7 +50,10 @@ builder.Services.AddScoped<IMongoDatabase>(sp =>
     var client = sp.GetRequiredService<IMongoClient>();
     return client.GetDatabase(settings.DatabaseName);
 });
+ 
 
+builder.Services.AddApplicationServices()
+                .AddInfraestructureRepositories(builder.Configuration);
 
 var app = builder.Build();
 

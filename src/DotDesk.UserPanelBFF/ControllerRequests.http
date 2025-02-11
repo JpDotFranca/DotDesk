@@ -1,0 +1,13 @@
+﻿### Register a DotDesk Client
+POST http://localhost:5050/api/DotDeskClient/register
+Content-Type: application/json
+
+{
+  "name": "Test Client",
+  "email": "test@example.com",
+  "identity": "84993162049",
+  "dotDeskClientResponsible":{
+    "name": "João",
+    "identity": "84993162049"
+  } 
+}
