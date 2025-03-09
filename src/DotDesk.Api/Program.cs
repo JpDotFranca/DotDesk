@@ -4,7 +4,7 @@ using DotDesk.Application.Services;
 using DotDesk.Infraestucture.Repositories.Abstraction;
 using DotDesk.Infrastructure.Configurations;
 using DotDesk.Infrastructure.Repositories;
-using DotDesk.UserPanelBFF.Hubs;
+using DotDesk.Api.Hubs;
 using Microsoft.Extensions.Options;
 using MongoDB.Driver;
 

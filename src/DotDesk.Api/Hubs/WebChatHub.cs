@@ -2,7 +2,7 @@
 using DotDesk.Domain.Entities;
 using Microsoft.AspNetCore.SignalR;
 
-namespace DotDesk.UserPanelBFF.Hubs;
+namespace DotDesk.Api.Hubs;
 
 public class WebChatHub : Hub
 {

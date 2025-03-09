@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 
-namespace DotDesk.UserPanelBFF.Controllers
+namespace DotDesk.Api.Controllers
 {
     [ApiController]
     [Route("api/[controller]/[action]")]

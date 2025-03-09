@@ -1,9 +1,9 @@
 ﻿using DotDesk.Application.Services.Abstraction;
 using DotDesk.Domain.Entities;
-using DotDesk.UserPanelBFF.DTO.DotDeskClientRegister;
+using DotDesk.Api.DTO.DotDeskClientRegister;
 using Microsoft.AspNetCore.Mvc;
 
-namespace DotDesk.UserPanelBFF.Controllers;
+namespace DotDesk.Api.Controllers;
 
 [ApiController]
 [Route("api/[controller]")]

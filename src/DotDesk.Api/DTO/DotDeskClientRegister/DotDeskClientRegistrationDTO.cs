@@ -1,6 +1,6 @@
 ﻿using DotDesk.Domain.Entities;
 
-namespace DotDesk.UserPanelBFF.DTO.DotDeskClientRegister;
+namespace DotDesk.Api.DTO.DotDeskClientRegister;
 
 public class DotDeskClientRegistrationDTO
 {

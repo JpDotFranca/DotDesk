@@ -14,7 +14,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\DotDesk.Application\DotDesk.Application.csproj" />
-    <ProjectReference Include="..\DotDesk.UserPanelBFF\DotDesk.UserPanelBFF.csproj" />
+    <ProjectReference Include="..\DotDesk.Api\DotDesk.Api.csproj" />
   </ItemGroup>
 
 </Project>

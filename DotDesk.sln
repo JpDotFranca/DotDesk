@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.10.35122.118
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DotDesk.UserPanelBFF", "src\DotDesk.UserPanelBFF\DotDesk.UserPanelBFF.csproj", "{C742AE6A-1AD2-419C-A03F-F602629B8B91}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DotDesk.Api", "src\DotDesk.Api\DotDesk.Api.csproj", "{C742AE6A-1AD2-419C-A03F-F602629B8B91}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{E673B6A0-F63C-4B5C-B272-5294D59018EA}"
 EndProject
