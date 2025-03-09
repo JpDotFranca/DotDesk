@@ -1,12 +1,10 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 
 namespace DotDesk.Api.Controllers
-{
-    [ApiController]
-    [Route("api/[controller]/[action]")]
-    public class ChatController : ControllerBase
+{ 
+    public class ChatController : DotDeskControllerBase
     {
-        [HttpGet()]
+        [HttpGet]
         public async Task<ActionResult<List<ChatMessageDTO>>> GetChatMessages(int chatId)
         {
             List<ChatMessageDTO> messages = new()
